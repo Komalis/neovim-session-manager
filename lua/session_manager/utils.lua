@@ -146,7 +146,7 @@ function utils.is_restorable(buffer)
     if #vim.api.nvim_buf_get_name(buffer) == 0 then
       return false
     end
-  elseif buftype ~= 'terminal' and buftype ~= 'help' then
+  elseif buftype ~= 'help' then
     -- Buffers other then normal, terminal and help are impossible to restore.
     return false
   end
